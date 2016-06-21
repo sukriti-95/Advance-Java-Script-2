@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advance JavaScript Assignment2 </title>
+</head>
+<body>
+<p id="main"></p> <br>
+<button onclick="addition(a,b)"> Addition</button> <br> <p id="addition"></p><br>
+<button onclick="subtraction(a,b)"> Subtraction</button> <br> <p id="subtraction"></p><br>
+<button onclick="multiply(a,b)"> Multiply</button> <br> <p id="multiply"></p><br>
+<button onclick="division(a,b)"> Divide</button> <br> <p id="division"></p><br>
+
+<script type="text/javascript">
+	
+	var a= prompt("Enter 1st number");
+	var b= prompt("Enter 2nd number");
+	document.getElementById("main").innerHTML=("Value of 1st Number= " + a + "<br>" + "Value of 2nd Number= " + b + "<br>")
+	function addition(var1,var2){
+			var result1;
+			result1 = parseInt(var1) + parseInt(var2);
+			document.getElementById("addition").innerHTML=("Result of Addition: " + result1);
+		}
+    function subtraction(var1,var2){
+			var result2;
+			result2 = var1 - var2;
+			document.getElementById("subtraction").innerHTML=("Result of Subtraction: " + result2);
+		}
+	function  multiply(var1, var2){
+			var result3;
+			result3 = var1 * var2;
+			document.getElementById("multiply").innerHTML=("Result of Multiplication: " + result3);
+		}
+	function division(var1,var2){
+			var result4;
+			if(var2 != 0){
+				result4 = var1 / var2;
+				document.getElementById("division").innerHTML= (" Result of Division: " + result4);
+				}else{
+				document.getElementById("division").innerHTML=("Invalid Operation.Please enter non zero value in denominator");
+			}	
+		}
+</script>
+
+</body>
+</html>

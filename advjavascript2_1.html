@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Advance JavaScript2 Assignment</title>
+</head>
+<body>
+<p id="para1"></p>
+<p id= "para2"></p>
+<script type="text/javascript">
+	function Car(make, model, year)
+	{
+		this.make= make;
+		this.model= model;
+		this.year= year;
+	}
+
+	var Car1= new Car('Nano', '123xxx', 2009);
+	var Car2= new Car('Maruti', '456xxx', 2000);
+	document.getElementById('para1').innerHTML= "Car1" + "<br>" + "Make is " + Car1.make + ", Model is " + Car1.model + ", Year is " + Car1.year;
+	document.getElementById('para2').innerHTML= "Car2" + "<br>"+ "Make is " + Car2.make + ", Model is " + Car2.model + ", Year is " + Car2.year;
+	
+</script>
+
+</body>
+</html>

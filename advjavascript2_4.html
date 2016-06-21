@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advance Java Script2 Assignmment 4</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	function person(firstname, lastname)
+	{
+		this.firstname= firstname;
+		this.lastname= lastname;
+	}
+	person.prototype.name=function()
+	{
+		alert("Name is " + this.firstname + this.lastname)
+	}
+
+	var p1= new person("Sukriti", "Kakkar");
+	function student()
+	{
+
+	}
+	student.prototype=p1;
+
+	student.prototype.changename=function()
+	{
+		var a= prompt("Enter firstname");
+		var b= prompt("Enter lastname");
+		this.firstname=a;
+		this.lastname=b;
+	}
+
+	student.prototype.display=function(){
+			document.write("First name : " + this.firstname + "<br>");
+			document.write("Last Name : " + this.lastname + "<br>");
+			
+			
+			var d=prompt("Do you want to change name ? Press y for yes and n for no","");
+			if(d === "y"){
+				this.changename();
+				this.display();
+			}else if(d=="n"){
+				
+			} else {
+				document.write("Enter valid option" + "<br>");
+				this.display();
+			}
+			document.write("<br>");
+		}
+		var student1= new student();
+		student1.display();
+		
+</script>
+
+</body>
+</html>
